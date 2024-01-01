@@ -29,8 +29,8 @@ images, labels = next(dataiter)
 # show images
 imshow(torchvision.utils.make_grid(images))
 
-conv1 = nn.Conv2d(3, 6, 5)
-pool  = nn.MaxPool2d(2,2)
+conv1 = nn.Conv2d(3, 6, 5)  # inchannel, outchannel, filter shape
+pool  = nn.MaxPool2d(2, 2)  # filter shape, stride
 conv2 = nn.Conv2d(6, 16, 5)
 print(images.shape)
 x     = conv1(images)
